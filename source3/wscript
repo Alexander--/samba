@@ -1036,7 +1036,7 @@ syscall(SYS_setgroups32, 0, NULL);
                                 'USE_SETUIDX',
                                 addmain=False,
                                 execute=True,
-                                mandatory=True,
+#                                mandatory=True,
                                 msg="Checking whether setuidx is available")
     if Options.options.with_dnsupdate:
         if not conf.CONFIG_SET('HAVE_KRB5'):

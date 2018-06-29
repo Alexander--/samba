@@ -429,8 +429,8 @@ removeea setea
 
     conf.CHECK_FUNCS_IN('pthread_create', 'pthread', checklibc=True, headers='pthread.h')
 
-    PTHREAD_CFLAGS='error'
-    PTHREAD_LDFLAGS='error'
+    PTHREAD_CFLAGS=''
+    PTHREAD_LDFLAGS=''
 
     if PTHREAD_LDFLAGS == 'error':
         if conf.CHECK_FUNCS_IN('pthread_attr_init', 'pthread'):
@@ -626,8 +626,7 @@ removeea setea
                     exit(0);
                     ''',
                     define='HAVE_SECURE_MKSTEMP',
-                    execute=True,
-                    mandatory=True) # lets see if we get a mandatory failure for this one
+                    execute=True) # lets see if we get a mandatory failure for this one
 
     # look for a method of finding the list of network interfaces
     for method in ['HAVE_IFACE_GETIFADDRS', 'HAVE_IFACE_AIX', 'HAVE_IFACE_IFCONF', 'HAVE_IFACE_IFREQ']:

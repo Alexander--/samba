@@ -257,11 +257,11 @@ def configure(conf):
     if not conf.CHECK_NEED_LC("-lc not needed"):
         conf.ADD_LDFLAGS('-lc', testflags=False)
 
-    if not conf.CHECK_CODE('#include "tests/summary.c"',
-                           define='SUMMARY_PASSES',
-                           addmain=False,
-                           msg='Checking configure summary'):
-        raise Utils.WafError('configure summary failed')
+#    if not conf.CHECK_CODE('#include "tests/summary.c"',
+#                           define='SUMMARY_PASSES',
+#                           addmain=False,
+#                           msg='Checking configure summary'):
+#        raise Utils.WafError('configure summary failed')
 
     if Options.options.enable_pie != False:
         if Options.options.enable_pie == True:
